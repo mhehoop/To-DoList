@@ -1,0 +1,12 @@
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/Domain/bin/Debug/net5.0/Domain.deps.json
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/Domain/bin/Debug/net5.0/Domain.dll
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/Domain/bin/Debug/net5.0/ref/Domain.dll
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/Domain/bin/Debug/net5.0/Domain.pdb
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/Domain/obj/Debug/net5.0/Domain.csprojAssemblyReference.cache
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/Domain/obj/Debug/net5.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/Domain/obj/Debug/net5.0/Domain.AssemblyInfoInputs.cache
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/Domain/obj/Debug/net5.0/Domain.AssemblyInfo.cs
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/Domain/obj/Debug/net5.0/Domain.csproj.CoreCompileInputs.cache
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/Domain/obj/Debug/net5.0/Domain.dll
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/Domain/obj/Debug/net5.0/ref/Domain.dll
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/Domain/obj/Debug/net5.0/Domain.pdb
