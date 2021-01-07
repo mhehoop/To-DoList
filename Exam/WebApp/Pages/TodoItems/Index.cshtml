@@ -1,0 +1,84 @@
+@page
+@model WebApp.Pages.TodoItems.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>To-do list</h1>
+
+<form>
+    <label asp-for="Order" class="control-label">Order by: </label>
+    <select asp-for="Order" class="form-control">
+        <option value="priority">Priority</option>
+        <option selected value="creation">Creation date</option>
+        <option value="due">Due date</option>
+    </select>
+     <input type="submit" value="Order" class="btn btn-primary"/>
+</form>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            Status
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodoItem[0].Heading)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodoItem[0].EPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodoItem[0].DateDue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodoItem[0].Category)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <form>
+
+
+        @if (Model.TodoItem != null)
+        {
+            @foreach (var item in Model.TodoItem)
+            {
+                <tr>
+                    <td>
+                        @if (item.DateDone != null)
+                        {
+                            <input type="checkbox" checked class="">
+                            <a href="/TodoItems/Do?id=@item.TodoItemId" style="cursor: pointer;color:green;">Done</a>
+                        }
+                        else
+                        {
+                            <input type="checkbox">
+                            <a href="/TodoItems/Do?id=@item.TodoItemId" style="cursor: pointer; color: red">Not done</a>
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Heading)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EPriority)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateDue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.Name)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.TodoItemId">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.TodoItemId">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.TodoItemId">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+    </form>
+    </tbody>
+</table>

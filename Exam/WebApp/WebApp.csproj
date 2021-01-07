@@ -28,4 +28,8 @@
       <ProjectReference Include="..\DAL.App.Ef\DAL.App.Ef.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\TodoItems\Done\undone.cshtml" />
+    </ItemGroup>
+
 </Project>
