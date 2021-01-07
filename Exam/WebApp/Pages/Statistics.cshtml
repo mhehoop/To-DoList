@@ -1,0 +1,32 @@
+@page
+@model WebApp.Pages.Statistics
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Statistics</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            Done
+        </th>
+        <th>To-Do</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="color: green;">
+            @Model.Done
+        </td>
+        <td style="color: red;">
+            @Model.Not
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <a asp-page="TodoItems/Index">Back to To-do's</a>
+</div>
