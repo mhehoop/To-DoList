@@ -19,8 +19,7 @@ namespace WebApp.Pages.TodoItems
             _context = context;
         }
 
-        [BindProperty]
-        public TodoItem TodoItem { get; set; }
+        [BindProperty] public TodoItem TodoItem { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

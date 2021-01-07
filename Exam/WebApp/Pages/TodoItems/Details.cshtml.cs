@@ -19,7 +19,7 @@ namespace WebApp.Pages.TodoItems
             _context = context;
         }
 
-        public TodoItem TodoItem { get; set; }
+        public TodoItem TodoItem { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

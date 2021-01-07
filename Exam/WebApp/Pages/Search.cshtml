@@ -1,19 +1,121 @@
 @page
+@using Domain
 @model WebApp.Pages.Search
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Create";
 }
 
-<!DOCTYPE html>
+<h1>Search</h1>
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
-    
+@* <label asp-for="SearchName" class="my-1 mr-2"></label> *@
+@*   <input asp-for="SearchName" class="form-control mb-2 mr-sm-2"/> *@
+@*   <label asp-for="SearchDescription" class="my-1 mr-2"></label> *@
+@*   <input asp-for="SearchDescription" class="form-control mb-2 mr-sm-2"/> *@
+@*    *@
+@*   <input asp-for="Btn"  type="submit" value="Search" class="btn btn-primary mb-2 my-1"/> *@
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="SearchHeadline" class="my-1 mr-2">Heading</label>
+                <input asp-for="SearchHeadline" class="form-control mb-2 mr-sm-2"/>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="SearchDescription" class="my-1 mr-2">Description</label>
+                <input asp-for="SearchDescription" class="form-control mb-2 mr-sm-2"/>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="SearchPriority" class="control-label">Priority</label>
+                <select asp-for="SearchPriority" class="form-control">
+                    <option selected="selected" value="null"></option>
+                    <option value="@EPriority.Low">Low</option>
+                    <option value="@EPriority.Medium">Medium</option>
+                    <option value="@EPriority.High">High</option>
+                </select>
+            </div>
+            <div>
+                <label asp-for="SearchCategoryId" class="my-1 mr-2">Category</label>
+                <select asp-for="SearchCategoryId" class="form-control mb-2 mr-sm-2">
+                    <option selected value="-1"></option>
+                    @if (Model.Categories != null)
+                    {
+                        foreach (var item in Model.Categories)
+                        {
+                            <option value=@item.CategoryId>@item.Name</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
 </div>
-</body>
-</html>
+
+<table class="table">
+
+    @if (Model.TodoItems != null)
+    {
+        <thead>
+        <tr>
+            <th>
+                Status
+            </th>
+            <th>
+                Heading
+            </th>
+            <th>
+                Priority
+            </th>
+            <th>
+                Due Date
+            </th>
+            <th>
+                Category
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        foreach (var item in Model.TodoItems)
+        {
+            <tr>
+                <td>
+                    @if (item.DateDone != null)
+                    {
+                        <input type="checkbox" checked class="">
+                        <a href="/TodoItems/Do?id=@item.TodoItemId" style="cursor: pointer;color:green;">Done</a>
+                    }
+                    else
+                    {
+                        <input type="checkbox">
+                        <a href="/TodoItems/Do?id=@item.TodoItemId" style="cursor: pointer; color: red">Not done</a>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Heading)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EPriority)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateDue)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.TodoItemId">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.TodoItemId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.TodoItemId">Delete</a>
+                </td>
+            </tr>
+        }
+    }
+</table>

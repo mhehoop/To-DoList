@@ -3,7 +3,6 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <UserSecretsId>aspnet-WebApp-86CED6E3-F6C6-468C-8AC4-5C679E01F95A</UserSecretsId>
-        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>

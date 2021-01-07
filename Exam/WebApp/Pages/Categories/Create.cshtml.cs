@@ -24,8 +24,7 @@ namespace WebApp.Pages.Categories
             return Page();
         }
 
-        [BindProperty]
-        public Category Category { get; set; }
+        [BindProperty] public Category Category { get; set; } = default!;
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()

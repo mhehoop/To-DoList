@@ -19,8 +19,7 @@ namespace WebApp.Pages.Categories
             _context = context;
         }
 
-        [BindProperty]
-        public Category Category { get; set; }
+        [BindProperty] public Category Category { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

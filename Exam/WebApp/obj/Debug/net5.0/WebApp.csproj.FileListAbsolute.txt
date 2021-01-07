@@ -193,3 +193,4 @@
 /Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/WebApp/obj/Debug/net5.0/Razor/Pages/TodoItems/Index.cshtml.g.cs
 /Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/WebApp/obj/Debug/net5.0/Razor/Pages/TodoItems/Do.cshtml.g.cs
 /Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/WebApp/obj/Debug/net5.0/Razor/Pages/Statistics.cshtml.g.cs
+/Users/Maarja/RiderProjects/icd008-2020f-exam/Exam/WebApp/obj/Debug/net5.0/Razor/Pages/Search.cshtml.g.cs
