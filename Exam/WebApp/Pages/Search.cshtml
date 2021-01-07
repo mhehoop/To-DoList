@@ -89,12 +89,12 @@
                 <td>
                     @if (item.DateDone != null)
                     {
-                        <input type="checkbox" checked class="">
+                        <input type="checkbox" checked class="" disabled>
                         <a href="/TodoItems/Do?id=@item.TodoItemId" style="cursor: pointer;color:green;">Done</a>
                     }
                     else
                     {
-                        <input type="checkbox">
+                        <input type="checkbox" disabled>
                         <a href="/TodoItems/Do?id=@item.TodoItemId" style="cursor: pointer; color: red">Not done</a>
                     }
                 </td>
