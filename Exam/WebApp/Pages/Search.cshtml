@@ -111,9 +111,9 @@
                     @Html.DisplayFor(modelItem => item.Category.Name)
                 </td>
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@item.TodoItemId">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@item.TodoItemId">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.TodoItemId">Delete</a>
+                    <a asp-page="TodoItems/Edit" asp-route-id="@item.TodoItemId">Edit</a> |
+                    <a asp-page="TodoItems/Details" asp-route-id="@item.TodoItemId">Details</a> |
+                    <a asp-page="TodoItems/Delete" asp-route-id="@item.TodoItemId">Delete</a>
                 </td>
             </tr>
         }
