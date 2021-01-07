@@ -8,19 +8,18 @@
 <h1>To-do list</h1>
 
 <form method="post">
-    <div class="form-group">
-        <label asp-for="Order" class="control-label">Order by: </label>
-        <select asp-for="Order" class="form-control">
+    <div class="form-inline">
+        <label asp-for="Order" class="control-label">Order by </label>
+        <select asp-for="Order" class="form-control mx-sm-3">
             <option value="priority">Priority</option>
             <option value="creation">Creation date</option>
             <option value="due">Due date</option>
         </select>
-    </div>
-    <div class="form-group">
         <input type="submit" value="Order" class="btn btn-primary"/>
     </div>
 </form>
 
+<p> </p>
 <table class="table">
     <thead>
     <tr>
